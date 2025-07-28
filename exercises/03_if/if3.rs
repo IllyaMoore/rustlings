@@ -1,13 +1,14 @@
 fn animal_habitat(animal: &str) -> &str {
-    // TODO: Fix the compiler error in the statement below.
-    let identifier = if animal == "crab" {
-        1
+    // TODO: Fix the compiler error in the statement bel
+
+    if animal == "crab" {
+        let identifier = 1;
     } else if animal == "gopher" {
-        2.0
+        let identifier = 2;
     } else if animal == "snake" {
-        3
+        let identifier = 3;
     } else {
-        "Unknown"
+        let identifier = "Unknown";
     };
 
     // Don't change the expression below!
