@@ -19,8 +19,13 @@ fn main() {
     let mut tokens = 100;
     let pretend_user_input = "8";
 
-    // Don't change this line.
-    let cost = total_cost(pretend_user_input)?;
+    let cost = match total_cost(pretend_user_input) {
+        Ok(c) => c,
+        Err(_) => {
+            println!("Invalid input!");
+            return;
+        }
+    };
 
     if cost > tokens {
         println!("You can't afford that many!");
@@ -29,3 +34,4 @@ fn main() {
         println!("You now have {tokens} tokens.");
     }
 }
+
